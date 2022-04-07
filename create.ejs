@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+</head>
+
+<% var n = blogs.length;for(var i= n-1; i>= 0; i--){ %>
+<body>
+       <div class="main">
+            <div class="navbar">
+                 <div class="icon">
+                    <h2 class="logo">Blogs</h2>
+                 </div>
+
+                
+
+                 <div class="search">
+                        
+                 </div>
+
+            </div>
+
+            <div class="content">
+
+                        <h2><%= blogs[i].title %></h2>
+                        <p id="par"><%= blogs[i].description %></p>
+                        <br/>
+                        <hr>
+                        <br>
+                        <button class="cn"><a href="/edit/<%= blogs[i].id %>">Edit</a></button>
+                        <button class="cn"><a href="/delete/<%= blogs[i].id %>">Delete</a></button>
+
+
+                        <div class="image">
+                           <img src="/<%= blogs[i].image %>" alt="_image" style="width: 130px; height: 130px;">
+                        </div>
+
+            </div>
+       </div>
+
+       <% } %>
+</body>
+</html>

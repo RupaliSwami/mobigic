@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uploading files</title>
+</head>
+<body>
+   
+ 
+ 
+<form action="/upload" enctype="multipart/form-data" method="POST"> 
+   <input type="file" name="file" onchange="preview()" />
+   <img id="frame" src="" />
+   <input type="submit" value="Upload a file"/>
+</form>
+ 
+ </body>
+ <script type="text/javascript">
+     function preview()
+      {
+       frame.src=URL.createObjectURL(event.target.files[0]);
+      }
+ </script>
+ 
+ </html>
+ 
+ 

@@ -1,0 +1,50 @@
+<!doctype html>
+	<html>
+	 <head><title>Uploading files</title></head>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <body>
+    <div class="container">
+
+      <div class="main">
+         <div class="navbar">
+   
+               <div class="icon">
+                   <h2 class="logo">Upload Files</h2>
+               </div>
+                 
+               <div class="menu">
+                   <ul>
+                       <li>
+                           <a class="create" href="/create">Upload Your File here..</a>
+                       </li>
+                   </ul>
+               </div>   
+        </div>
+     </div>
+	 	<div class="container">
+	 		<table class="table">
+	 			<tr>
+	 			  <th>Id</th>
+	 			  <th>FileName</th>
+	 			  
+	 			  <th>Image</th>
+           <th>Delete</th>
+	 			  
+	 		    </tr>
+	 		   
+	 		   <% for(var i=0; i< userfile.length; i++){ %>
+               <tr>
+                   <td><%= userfile[i].id %></td>
+                   <td><%= userfile[i].filename %></td>
+                   
+                   <td> <img src="<%= userfile[i].filename %>" style="width:100px; height:100px"></td>
+                   <td><a href="/delete/<%= userfile[i].id %>">Delete</a></td>
+            
+               </tr>
+                  <%  } %>
+       
+	 		   
+	 		</table>
+	 	</div>
+	 </body>
+	</html>
